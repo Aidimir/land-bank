@@ -1,0 +1,255 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/aidimirmagomedov/Projects/Land-bank/Api/Api.csproj": {}
+  },
+  "projects": {
+    "/Users/aidimirmagomedov/Projects/Land-bank/Api/Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/aidimirmagomedov/Projects/Land-bank/Api/Api.csproj",
+        "projectName": "Api",
+        "projectPath": "/Users/aidimirmagomedov/Projects/Land-bank/Api/Api.csproj",
+        "packagesPath": "/Users/aidimirmagomedov/.nuget/packages/",
+        "outputPath": "/Users/aidimirmagomedov/Projects/Land-bank/Api/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/aidimirmagomedov/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/sdk/7.0.309/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/aidimirmagomedov/Projects/Land-bank/Dal/Dal.csproj": {
+                "projectPath": "/Users/aidimirmagomedov/Projects/Land-bank/Dal/Dal.csproj"
+              },
+              "/Users/aidimirmagomedov/Projects/Land-bank/Domain/Domain.csproj": {
+                "projectPath": "/Users/aidimirmagomedov/Projects/Land-bank/Domain/Domain.csproj"
+              },
+              "/Users/aidimirmagomedov/Projects/Land-bank/Logic/Logic.csproj": {
+                "projectPath": "/Users/aidimirmagomedov/Projects/Land-bank/Logic/Logic.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.309/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/aidimirmagomedov/Projects/Land-bank/Dal/Dal.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/aidimirmagomedov/Projects/Land-bank/Dal/Dal.csproj",
+        "projectName": "Dal",
+        "projectPath": "/Users/aidimirmagomedov/Projects/Land-bank/Dal/Dal.csproj",
+        "packagesPath": "/Users/aidimirmagomedov/.nuget/packages/",
+        "outputPath": "/Users/aidimirmagomedov/Projects/Land-bank/Dal/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/aidimirmagomedov/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.309/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/aidimirmagomedov/Projects/Land-bank/Domain/Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/aidimirmagomedov/Projects/Land-bank/Domain/Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "/Users/aidimirmagomedov/Projects/Land-bank/Domain/Domain.csproj",
+        "packagesPath": "/Users/aidimirmagomedov/.nuget/packages/",
+        "outputPath": "/Users/aidimirmagomedov/Projects/Land-bank/Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/aidimirmagomedov/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/aidimirmagomedov/Projects/Land-bank/Dal/Dal.csproj": {
+                "projectPath": "/Users/aidimirmagomedov/Projects/Land-bank/Dal/Dal.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.309/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/aidimirmagomedov/Projects/Land-bank/Logic/Logic.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/aidimirmagomedov/Projects/Land-bank/Logic/Logic.csproj",
+        "projectName": "Logic",
+        "projectPath": "/Users/aidimirmagomedov/Projects/Land-bank/Logic/Logic.csproj",
+        "packagesPath": "/Users/aidimirmagomedov/.nuget/packages/",
+        "outputPath": "/Users/aidimirmagomedov/Projects/Land-bank/Logic/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/aidimirmagomedov/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/aidimirmagomedov/Projects/Land-bank/Dal/Dal.csproj": {
+                "projectPath": "/Users/aidimirmagomedov/Projects/Land-bank/Dal/Dal.csproj"
+              },
+              "/Users/aidimirmagomedov/Projects/Land-bank/Domain/Domain.csproj": {
+                "projectPath": "/Users/aidimirmagomedov/Projects/Land-bank/Domain/Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.309/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
