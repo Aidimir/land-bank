@@ -5,12 +5,12 @@ namespace Dal.Repositories.Interfaces
 {
 	public interface ILandRepository
 	{
-        public Task<IEnumerable<LandAsset>> FetchLandAssets(int? id = null,
+        public Task<IEnumerable<LandAsset>> FetchLandAssetsAsync(int? id = null,
             string? owner = null,
-            string? Fullname = null,
+            string? fullname = null,
             LandType? type = null);
-        public Task DeleteAsset(int id);
-        public Task<LandAsset> CreateAsset(LandAsset asset);
-        public Task<LandAsset> UpdateAsset(int id, LandAsset asset);
+        public Task DeleteAssetAsync(int id);
+        public Task<LandAsset> CreateAssetAsync(LandAsset asset);
+        public Task<LandAsset> UpdateAssetAsync(int id, LandAsset asset);
     }
 }
