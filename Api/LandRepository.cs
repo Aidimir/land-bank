@@ -77,12 +77,12 @@ namespace Dal.Repositories
 
             if (!string.IsNullOrEmpty(owner))
             {
-                result = result.Where(c => c.Owner.Contains(owner));
+                result = result.Where(c => c.Owner.ToLower().Contains(owner.ToLower()));
             }
 
             if (!string.IsNullOrEmpty(Fullname))
             {
-                result = result.Where(c => c.Fullname.Contains(Fullname));
+                result = result.Where(c => c.Fullname.ToLower().Contains(Fullname.ToLower()));
             }
 
             if (type is not null)
