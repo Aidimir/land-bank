@@ -1,6 +1,7 @@
 ﻿using Logic.Features;
 using Logic.Interfaces;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Api.MIddlewares;
 using System.Net;
 
 namespace Api.DepencyRegistration
@@ -10,6 +11,7 @@ namespace Api.DepencyRegistration
         public static void AddLogicServices(this IServiceCollection services)
         {
             services.AddTransient<ILandService, LandService>();
+            services.AddTransient<GlobalExceptionHandlerMiddleware>();
             services.TryAddScoped<HttpClient>();
             services.TryAddScoped<WebClient>();
         }

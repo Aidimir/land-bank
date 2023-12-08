@@ -6,7 +6,7 @@ namespace Logic.Interfaces
 	{
 		public Task<IEnumerable<LandAsset>> FetchLandAssets(int? id = null,
 			string? owner = null,
-			string? Fullname = null,
+			string? fullname = null,
 			LandType? type = null);
 
         public Task DeleteAsset(int id);

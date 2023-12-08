@@ -1,4 +1,5 @@
-﻿using Dal.Models;
+﻿using Dal.Exceptions;
+using Dal.Models;
 using Dal.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,13 +9,24 @@ namespace Dal.Repositories
     {
         private DbSet<LandAsset> _landAssets { get; set; }
 
-        public async Task<LandAsset> CreateAssetAsync(LandAsset asset)
+        public LandRepository(DbContextOptions options) : base(options) { }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            var sameAssetsInDb = await _landAssets.FirstOrDefaultAsync(g => g.Id == asset.Id);
+            modelBuilder.Entity<LandAsset>()
+                .Property(l => l.CreatedAt)
+                .HasColumnType("timestamp without time zone")
+                .HasDefaultValueSql("NOW()")
+                .ValueGeneratedOnAdd();
+        }
+
+            public async Task<LandAsset> CreateAssetAsync(LandAsset asset)
+        {
+            var sameAssetsInDb = await _landAssets.FirstOrDefaultAsync(g => g.ObjectName == asset.ObjectName);
 
             if (sameAssetsInDb != null)
             {
-                throw new Exception("Asset with this id is already in database");
+                throw new ObjectAlreadyExistsException("Asset with this id is already in database");
             }
 
             await _landAssets.AddAsync(asset);
@@ -36,8 +48,7 @@ namespace Dal.Repositories
 
             if (result == null)
             {
-                //throw new NotFoundException("Couldn't find any contact with this id");
-                throw new Exception("Couldn't find any contact with this id");
+                throw new NotFoundException("Не найдено земельного актива с таким id");
             }
 
             return result;

@@ -2,6 +2,7 @@
 using Dal.Models;
 using Dal.Repositories.Interfaces;
 using Logic.Interfaces;
+using Dal.Exceptions;
 
 namespace Logic.Features
 {
@@ -34,7 +35,18 @@ namespace Logic.Features
 
         public async Task<LandAsset> UpdateAsset(int id, LandAsset asset)
         {
-            return await _db.UpdateAssetAsync(id, asset);
+            var existingAsset = (await _db.FetchLandAssetsAsync(id)).FirstOrDefault();
+            if (existingAsset is null)
+            {
+                throw new NotFoundException("Не существует актива с таким id");
+            }
+            existingAsset.DealStage = asset.DealStage;
+            existingAsset.Fullname = asset.Fullname;
+            existingAsset.ObjectName = asset.ObjectName;
+            existingAsset.Owner = asset.Owner;
+            existingAsset.Type = asset.Type;
+        
+            return await _db.UpdateAssetAsync(id, existingAsset);
         }
     }
 }

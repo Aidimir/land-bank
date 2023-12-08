@@ -1,4 +1,5 @@
 ﻿using Api.DepencyRegistration;
+using Api.MIddlewares;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
 
@@ -24,9 +25,9 @@ builder.Services.AddSwaggerGen(options =>
         Version = "v1",
         Title = "Land-bank API",
     });
-    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    var fullpath = $"{AppDomain.CurrentDomain.BaseDirectory + xmlFilename}";
-    options.IncludeXmlComments(fullpath);
+    //var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    //var fullpath = $"{AppDomain.CurrentDomain.BaseDirectory + xmlFilename}";
+    //options.IncludeXmlComments(fullpath);
 });
 
 builder.Services.AddLogicServices();
@@ -47,7 +48,7 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-//app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
+app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
 
 app.MapControllers();
 

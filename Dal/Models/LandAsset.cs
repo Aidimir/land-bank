@@ -12,6 +12,8 @@ namespace Dal.Models
         [Key]
         public int Id { get; set; }
 
+        public required string ObjectName { get; set; }
+
         public required string Owner { get; set; }
 
         public required string Fullname { get; set; }
