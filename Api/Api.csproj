@@ -18,6 +18,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.14" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.14" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.0.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,6 +42,10 @@
     <None Remove="Controllers\LandAssets\DTO\" />
     <None Remove="Controllers\LandAssets\DTO\RequestModels\" />
     <None Remove="Controllers\LandAssets\DTO\ResponseModels\" />
+    <None Remove="Controllers\Authorization\" />
+    <None Remove="Controllers\Authorization\DTO\" />
+    <None Remove="Controllers\Authorization\DTO\RequestModels\" />
+    <None Remove="Controllers\Authorization\DTO\ResponseModels\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MIddlewares\" />
@@ -46,5 +54,9 @@
     <Folder Include="Controllers\LandAssets\DTO\" />
     <Folder Include="Controllers\LandAssets\DTO\RequestModels\" />
     <Folder Include="Controllers\LandAssets\DTO\ResponseModels\" />
+    <Folder Include="Controllers\Authorization\" />
+    <Folder Include="Controllers\Authorization\DTO\" />
+    <Folder Include="Controllers\Authorization\DTO\RequestModels\" />
+    <Folder Include="Controllers\Authorization\DTO\ResponseModels\" />
   </ItemGroup>
 </Project>

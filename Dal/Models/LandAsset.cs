@@ -28,7 +28,7 @@ namespace Dal.Models
         //[ForeignKey("ForeignId")]
         //public int ForeignId { get; set; }
 
-        //public virtual Contragent Contragent { get; set; }
+        //public virtual CustomClass CustomClassInstance { get; set; }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public DateTime CreatedAt { get; set; }

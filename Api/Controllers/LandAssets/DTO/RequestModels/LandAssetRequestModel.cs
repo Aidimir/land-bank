@@ -24,7 +24,7 @@ namespace Api.Controllers.LandAssets.DTO.RequestModels
         [EnumDataType(typeof(DealStageEnum), ErrorMessage = "Недопустимое значение для статуса")]
         public required DealStageEnum DealStage { get; set; }
 
-        public LandAsset CreateLandAsset()
+        public virtual LandAsset CreateLandAsset()
         {
             return new LandAsset { DealStage = DealStage, Fullname = Fullname, Owner = Owner, Type = Type, ObjectName = ObjectName };
         }

@@ -9,7 +9,7 @@ namespace Dal.Repositories
     {
         private DbSet<LandAsset> _landAssets { get; set; }
 
-        public LandRepository(DbContextOptions options) : base(options) { }
+        public LandRepository(DbContextOptions<LandRepository> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -26,7 +26,7 @@ namespace Dal.Repositories
 
             if (sameAssetsInDb != null)
             {
-                throw new ObjectAlreadyExistsException("Asset with this id is already in database");
+                throw new ObjectAlreadyExistsException("Актив с таким id уже существует");
             }
 
             await _landAssets.AddAsync(asset);

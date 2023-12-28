@@ -2,10 +2,14 @@
 using Logic.Interfaces;
 using Dal.Models;
 using Api.Controllers.LandAssets.DTO.RequestModels;
+using Microsoft.AspNetCore.Authorization;
+using Dal.Constants;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace Api.Controllers;
 
 [ApiController]
+[Authorize]
 [Route("[controller]")]
 public class LandAssetsController : ControllerBase
 {
@@ -23,11 +27,12 @@ public class LandAssetsController : ControllerBase
             LandType? type = null)
     {
         var result = await _service.FetchLandAssets(id, owner, fullname, type);
-
         return Ok(result);
     }
 
+
     [HttpPost]
+    [Authorize(Roles = RoleConstants.Administrator)]
     public async Task<ActionResult> CreateAsset(LandAssetRequestModel asset)
     {
         var landAsset = asset.CreateLandAsset();
@@ -46,6 +51,7 @@ public class LandAssetsController : ControllerBase
     }
 
     [HttpDelete]
+    [Authorize(Roles = RoleConstants.Administrator)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<NoContentResult> Delete(int id)
     {
