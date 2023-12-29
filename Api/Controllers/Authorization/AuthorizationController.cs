@@ -103,6 +103,7 @@ namespace Api.Controllers.Authorization
             return Ok(new AuthResponse
             {
                 Email = user.Email!,
+                Fullname = user.FullName,
                 Token = accessToken,
                 Roles = roles
             }) ;
