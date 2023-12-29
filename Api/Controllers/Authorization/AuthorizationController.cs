@@ -40,7 +40,8 @@ namespace Api.Controllers.Authorization
             var user = new User
             {
                 Email = request.Email,
-                UserName = request.Email
+                UserName = request.Email,
+                FullName = request.Fullname
             };
 
             var result = await _userManager.CreateAsync(user, request.Password);

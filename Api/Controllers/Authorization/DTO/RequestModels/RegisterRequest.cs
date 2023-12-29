@@ -27,6 +27,10 @@ namespace Api.Controllers.Authorization.DTO.RequestModels
         [Display(Name = "Роли")]
         [MinLength(1)]
         public List<string> Roles { get; set; }
+
+        [Required]
+        [Display(Name = "ФИО")]
+        public string Fullname { get; set; }
     }
 }
 
